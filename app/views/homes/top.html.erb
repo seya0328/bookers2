@@ -1,8 +1,19 @@
+
+
 <head>
-  
-   <script src="https://kit.fontawesome.com/efdedf3b04.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/efdedf3b04.js" crossorigin="anonymous"></script>
   </h1>
 </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+     <a class="navbar-brand" href="/">
+      <span>Bookers</span>
+     </a>
+    
+    
+</body>
+
 
 <main>
   <h1>Welcom to 
@@ -19,7 +30,12 @@
   <p> about various books!</p>
 </main>
 
-
+<li>
+  <%= link_to "Log in", new_user_session_path %>
+</li>
+<li>
+  <%= link_to "sing up" , new_user_registration_path %>
+</li>
 
 <footer>
   <p>CopyRight Infratop.inc</p>
