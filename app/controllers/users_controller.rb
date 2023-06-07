@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
   
   def create
-    @post_image = PostImage.new(post_image_params)
-    if @book.save
+    @user = PostImage.new(user_params)
+    if @user.save
       flash[:notice] = "successfully updated."
-      redirect_to book_path(@book.id)
+      redirect_to book_path(@user.id)
     else
       flash.now[:alret] = "error"
-      @books = Book.all
+      @users = Book.all
       render "index"
     end
   end
