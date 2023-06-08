@@ -15,6 +15,20 @@
 
   <body>
      <header>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="container">
+           <a class="navbar-brand" href="/">
+            <span>Bookers</span>
+           </a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">…</button>
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarNavDropdown">
+             <ul class="navbar-nav ml-auto">
+              <li>
+               <a class="nav-link text-light" herf="/">
+                 <i class="fas fa-home" aria-hidden="true"></i>
+               </a>
     <% if user_signed_in? %>
       <li>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
@@ -29,8 +43,16 @@
     <% end %>
      </header>
     <%= yield %>
+    
+    <main>
+     
+    </main>
+    
+    
     <footer>
-      <p>CopyRight Infratop.inc</p>
+      
+          <p>CopyRight Infratop.inc</p>
+       
     </footer>
   </body>
 </html>
