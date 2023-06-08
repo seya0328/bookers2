@@ -4,6 +4,9 @@ class BooksController < ApplicationController
   end
   
   def create
+    book = Book.new(list_params)
+    book.save
+    
     @post_image = PostImage.new(post_image_params)
     if @book.save
       flash[:notice] = "successfully updated."
@@ -33,7 +36,9 @@ class BooksController < ApplicationController
     else
     render "edit"
     end
+    end
+  end
     private
-  def list_params
-    params.require(:list).permit(:title, :body, :image)  end
+  def book_params
+    params.require(:book).permit(:title, :body, :image)
   end
