@@ -6,8 +6,11 @@
     <%= flash.now[:alt] %>
   </div>
   
-  <%= user.name %>
+  <%= form_with model:user.name do %>
+  <h4>name</h4>
+  <% end %>
   <%= user.introduction %>
+  <h4>introduction</h4>
   <%= image_tag user.get_profile_image(width, height) %></p>
   
   <h1>New book</h1>
