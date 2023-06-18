@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   end
   
   def create
-    book = Book.new(list_params)
+    book = Book.new(book_params)
     book.save
     
     @post_image = PostImage.new(post_image_params)

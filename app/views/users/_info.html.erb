@@ -22,8 +22,8 @@
   </div>
   
   <div class="row">
-    <%= form_with model: User.new do |f| %>
-    <%= f.submit 'Create Book' %>
+    
+    <%= link_to edit_user_path(user.id),class:"btn btn-outline-secondary btn-block" do%>
     <i class="fa-solid fa-gears"></i>
     <% end %>
   </div>
