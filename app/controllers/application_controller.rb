@@ -8,14 +8,14 @@ class ApplicationController < ActionController::Base
       flash[:notice] = "Sign in successfully."
       user_path(resource)  #指定したいパスに変更
     else
-      flash[:notice] = "Sign up successfully."
+      flash[:notice] = "Welcome! You have signed up successfully."
       user_path(resource) #指定したいパスに変更
     end
   end
   
   def after_sign_out_path_for(resource)
     root_path
-    flash[:notice] = "投稿が成功しました"
+    flash[:notice] = "Signed out successfully."
   end
 
 protected

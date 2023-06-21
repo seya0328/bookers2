@@ -1,12 +1,7 @@
 
       <div class='col-md-3'>
         <h1>User info</h1>
-          <div class="text-success">
-            <%= flash[:notice] %>
-          </div>
-          <div class="text-danger">
-              <%= flash.now[:alt] %>
-           </div>
+          
           <table class='table'>
             <tbody>
               <tr><%= image_tag user.get_profile_image(100,100) %></tr>
