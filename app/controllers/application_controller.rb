@@ -5,17 +5,18 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     
     if current_user
-      flash[:notice] = "Sign in successfully."
+      #flash[:notice] = "Sign in successfully."
       user_path(resource)  #指定したいパスに変更
     else
-      flash[:notice] = "Welcome! You have signed up successfully."
+      #flash[:notice] = "Welcome! You have signed up successfully."
       user_path(resource) #指定したいパスに変更
     end
   end
   
   def after_sign_out_path_for(resource)
+    
+    #flash[:notice] = "Signed out successfully."
     root_path
-    flash[:notice] = "Signed out successfully."
   end
 
 protected
